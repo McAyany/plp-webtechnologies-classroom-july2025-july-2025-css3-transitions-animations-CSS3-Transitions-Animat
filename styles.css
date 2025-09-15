@@ -1,0 +1,58 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* -------------------- */
+/* PART 1: CSS ANIMATIONS ONLY */
+/* -------------------- */
+
+.hover-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hover-btn:hover {
+  background: #388e3c;
+  transform: scale(1.1);
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #2196f3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); background: #64b5f6; }
+  100% { transform: scale(1); }
+}
+
+/* -------------------- */
+/* PART 3: JS + CSS */
+/* -------------------- */
+#js-animated-box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 20px auto;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+#js-animated-box.animate {
+  transform: rotate(360deg) scale(1.2);
+  opacity: 0.5;
+}
